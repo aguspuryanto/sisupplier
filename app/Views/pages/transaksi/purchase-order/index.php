@@ -2,24 +2,24 @@
 
 <?= $this->section('content') ?>
 
-<div class="container p-0">
+<div class="container-fluid p-0">
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">Data Qoutation</h5>
-            <a href="<?= base_url('transaksi/quote/add') ?>" class="btn btn-primary mb-3">
+            <h5 class="card-title">Data Purchase Order</h5>
+            <a href="<?= base_url('transaksi/purchase-order/add') ?>" class="btn btn-primary mb-3">
                 <i class="fas fa-plus"></i> Tambah
             </a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table id="quotationTable" class="table table-bordered table-hover">
+                <table id="purchaseOrderTable" class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>No. Qoutation</th>
-                            <th>Item Name</th>
-                            <th>Date Qoutation</th>
-                            <th>Due Date Qoutation</th>
+                            <th>No. Quotation</th>
+                            <th>No. PO</th>
+                            <th>Date PO</th>
+                            <th>Due Date PO</th>
                             <th>Customer</th>
                             <th>PIC Customer</th>
                             <th>Amount</th>
@@ -32,7 +32,6 @@
     </div>
 </div>
 
-<!-- Include DataTables CSS & JS di section yang sesuai -->
 <?= $this->section('styles') ?>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
@@ -46,11 +45,11 @@
 
 <script>
 $(document).ready(function() {
-    $('#quotationTable').DataTable({
+    $('#purchaseOrderTable').DataTable({
         processing: true,
         serverSide: true,
         ajax: {
-            url: '<?= base_url('transaksi/quote/getdata') ?>',
+            url: '<?= base_url('transaksi/purchase-order/getdata') ?>',
             type: 'POST'
         },
         columns: [
@@ -61,14 +60,24 @@ $(document).ready(function() {
                 }
             },
             { data: 'quotation_number' },
-            { data: 'item_name' },
-            { data: 'quotation_date' },
-            { data: 'due_date' },
+            { data: 'po_number' },
+            { 
+                data: 'po_date',
+                render: function(data) {
+                    return moment(data).format('DD/MM/YYYY');
+                }
+            },
+            { 
+                data: 'due_date',
+                render: function(data) {
+                    return moment(data).format('DD/MM/YYYY');
+                }
+            },
             { data: 'customer' },
             { data: 'pic_customer' },
             { 
                 data: 'amount',
-                render: function(data, type, row) {
+                render: function(data) {
                     return new Intl.NumberFormat('id-ID', { 
                         style: 'currency', 
                         currency: 'IDR' 
@@ -80,13 +89,13 @@ $(document).ready(function() {
                 render: function(data, type, row) {
                     return `
                         <div class="btn-group" role="group">
-                            <a href="<?= base_url('transaksi/quote/edit/') ?>${row.id}" class="btn btn-sm btn-warning">
+                            <a href="<?= base_url('transaksi/purchase-order/edit/') ?>${row.id}" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="<?= base_url('transaksi/quote/view/') ?>${row.id}" class="btn btn-sm btn-info">
+                            <a href="<?= base_url('transaksi/purchase-order/view/') ?>${row.id}" class="btn btn-sm btn-info">
                                 <i class="fas fa-eye"></i>
                             </a>
-                            <button onclick="deleteQuote(${row.id})" class="btn btn-sm btn-danger">
+                            <button onclick="deletePO(${row.id})" class="btn btn-sm btn-danger">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
@@ -109,17 +118,17 @@ $(document).ready(function() {
     });
 });
 
-function deleteQuote(id) {
-    if(confirm('Are you sure you want to delete this quotation?')) {
+function deletePO(id) {
+    if(confirm('Are you sure you want to delete this purchase order?')) {
         $.ajax({
-            url: '<?= base_url('transaksi/quote/delete/') ?>' + id,
+            url: '<?= base_url('transaksi/purchase-order/delete/') ?>' + id,
             type: 'GET',
             success: function(response) {
-                $('#quotationTable').DataTable().ajax.reload();
-                alert('Quotation deleted successfully');
+                $('#purchaseOrderTable').DataTable().ajax.reload();
+                alert('Purchase Order deleted successfully');
             },
             error: function(xhr, status, error) {
-                alert('Error deleting quotation');
+                alert('Error deleting purchase order');
             }
         });
     }
@@ -127,4 +136,4 @@ function deleteQuote(id) {
 </script>
 <?= $this->endSection() ?>
 
-<?= $this->endSection() ?>
+<?= $this->endSection() ?> 

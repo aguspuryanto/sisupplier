@@ -1,0 +1,29 @@
+/* Quotation table styles */
+.table-responsive {
+    margin-bottom: 1rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    vertical-align: middle;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.action-buttons .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Search box styles */
+.input-group {
+    width: 300px;
+    float: right;
+}
+
+/* Pagination styles */
+.pagination {
+    margin-bottom: 0;
+} 
