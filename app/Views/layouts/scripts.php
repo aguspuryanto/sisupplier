@@ -1,8 +1,9 @@
 
 
 	<script src="<?= base_url('assets/js/app.js'); ?>"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/js/all.min.js" integrity="sha512-YUwFoN1yaVzHxZ1cLsNYJzVt1opqtVLKgBQ+wDj+JyfvOkH66ck1fleCm8eyJG9O1HpKIf86HrgTXkWDyHy9HA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<script>
+	<!-- <script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
 			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
@@ -222,4 +223,4 @@
 				defaultDate: defaultDate
 			});
 		});
-	</script>
+	</script> -->

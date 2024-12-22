@@ -11,13 +11,17 @@
     <div class="row text-center">
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">👥</div>
+                <div class="card-icon">
+                    <i class="fa fa-users fa-5x"></i>
+                </div>
                 <div>Total Customer</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">📦</div>
+                <div class="card-icon">
+                    <i class="fas fa-boxes fa-5x"></i>
+                </div>
                 <div>Total Barang</div>
             </div>
         </div>
