@@ -7,6 +7,14 @@
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
         <?php endif; ?>
+        <div class="card bg-secondary mb-3">
+            <div class="card-body">
+                <h6>Demo Only</h6>
+                <span class="d-block">Login: admin</span>
+                <span>Password: password</span>
+            </div>
+        </div>
+
         <form action="/auth/processLogin" method="post">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>

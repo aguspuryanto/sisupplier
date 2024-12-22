@@ -22,7 +22,7 @@
     </ul>
 </nav>  -->
 
-<nav id="sidebar" class="sidebar js-sidebar">
+<nav id="sidebar" class="sidebar js-sidebar d-none">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="<?= base_url('/') ?>">
           <span class="align-middle">AdminKit</span>
