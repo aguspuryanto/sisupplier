@@ -27,13 +27,17 @@
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">📦✔️</div>
+                <div class="card-icon">
+                    <i class="fas fa-boxes fa-5x"></i>
+                </div>
                 <div>Total Barang Ready</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">📦❌</div>
+                <div class="card-icon">
+                    <i class="fas fa-boxes fa-5x"></i>
+                </div>
                 <div>Total Barang Indent</div>
             </div>
         </div>
@@ -42,25 +46,33 @@
     <div class="row text-center">
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">✅</div>
+                <div class="card-icon">
+                    <i class="fas fa-wallet fa-5x"></i>
+                </div>
                 <div>Total Lunas Hari Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">✅</div>
+                <div class="card-icon">
+                    <i class="fas fa-wallet fa-5x"></i>
+                </div>
                 <div>Total Lunas Bulan Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">❌</div>
+                <div class="card-icon">
+                    <i class="fas fa-credit-card fa-5x"></i>
+                </div>
                 <div>Total Belum Lunas Hari Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">❌</div>
+                <div class="card-icon">
+                    <i class="fas fa-credit-card fa-5x"></i>
+                </div>
                 <div>Total Belum Lunas Bulan Ini</div>
             </div>
         </div>
@@ -69,25 +81,33 @@
     <div class="row text-center">
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">✅</div>
+                <div class="card-icon">
+                    <i class="fas fa-receipt fa-5x"></i>
+                </div>
                 <div>Total Jatuh Tempo Hari Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">✅</div>
+                <div class="card-icon">
+                    <i class="fas fa-receipt fa-5x"></i>
+                </div>
                 <div>Total Jatuh Tempo Bulan Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">❌</div>
+                <div class="card-icon">
+                    <i class="fas fa-receipt fa-5x"></i>
+                </div>
                 <div>Total Jatuh Tempo Tahun Ini</div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card py-5">
-                <div class="card-icon">❌</div>
+                <div class="card-icon">
+                    <i class="fas fa-receipt fa-5x"></i>
+                </div>
                 <div>Total Transaksi Invoice</div>
             </div>
         </div>

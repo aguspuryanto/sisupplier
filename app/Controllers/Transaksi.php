@@ -10,11 +10,13 @@ class Transaksi extends BaseController
     public function index()
     {
         //
+        echo "Transaksi::Index";
     }
 
     public function quote()
     {
         // 
+        echo "Transaksi::Quote";
     }
     
     public function purchaseOrder()
