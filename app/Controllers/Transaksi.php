@@ -16,7 +16,8 @@ class Transaksi extends BaseController
     public function quote()
     {
         // 
-        echo "Transaksi::Quote";
+        // echo "Transaksi::Quote";
+        return view("pages/transaksi/quote/quote");
     }
     
     public function purchaseOrder()
